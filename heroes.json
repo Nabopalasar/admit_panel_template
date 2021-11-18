@@ -1,0 +1,49 @@
+{
+  "heroes": [
+    {
+      "id": "18c5ead2-f80a-4801-ba18-24baadf7ca2b",
+      "name": "Gilgamesh",
+      "description": "Destroy",
+      "element": "fire"
+    },
+    {
+      "id": "c28a35b5-b305-49e4-8abc-2045af435633",
+      "name": "Kamael",
+      "description": "Fly",
+      "element": "wind"
+    },
+    {
+      "id": "abb1b467-4098-4a20-ac37-5e7b3db30247",
+      "name": "Semiramida",
+      "description": "Build",
+      "element": "earth"
+    }
+  ],
+  "filters": [
+    {
+      "name": "all",
+      "label": "Все",
+      "className": "btn btn-outline-dark"
+    },
+    {
+      "name": "fire",
+      "label": "Огонь",
+      "className": "btn btn-danger"
+    },
+    {
+      "name": "water",
+      "label": "Вода",
+      "className": "btn btn-primary"
+    },
+    {
+      "name": "wind",
+      "label": "Ветер",
+      "className": "btn btn-success"
+    },
+    {
+      "name": "earth",
+      "label": "Земля",
+      "className": "btn btn-secondary"
+    }
+  ]
+}
