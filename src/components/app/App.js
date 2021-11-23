@@ -4,7 +4,7 @@ import HeroesFilters from '../heroesFilters/HeroesFilters';
 
 import './app.scss';
 
-
+// https://redux-toolkit.js.org/api/createAsyncThunk
 
 const App = () => {
     
