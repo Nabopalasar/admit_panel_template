@@ -4,6 +4,16 @@ import HeroesFilters from '../heroesFilters/HeroesFilters';
 
 import './app.scss';
 
+// что включенно в Redux Tool Kit
+// https://redux-toolkit.js.org/introduction/getting-started#whats-included
+
+//  cra-template-redux
+// https://github.com/reduxjs/cra-template-redux
+
+// configureStore
+// https://redux-toolkit.js.org/api/configureStore
+
+
 const App = () => {
     
     return (
