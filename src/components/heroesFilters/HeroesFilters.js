@@ -1,21 +1,19 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useHttp} from "../../hooks/http.hook";
 import {useEffect} from "react";
 import classNames from "classnames";
 import Spinner from "../spinner/Spinner";
-import {fetchFilters} from "../../actions";
-import {activeFilterChanged} from "./filtersSlice";
+import {activeFilterChanged, fetchFilters} from "./filtersSlice";
 
 
 const HeroesFilters = () => {
 
     const {filters, filtersLoadingStatus, activeFilter} = useSelector(state => state.filters);
     const dispatch = useDispatch();
-    const {request} = useHttp();
+    // const {request} = useHttp();
 
     // Запрос на сервер для получения фильтров и последовательной смены состояния
     useEffect(() => {
-        dispatch(fetchFilters(request));
+        dispatch(fetchFilters());
         // eslint-disable-next-line
     }, []);
 
@@ -58,7 +56,7 @@ const HeroesFilters = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default HeroesFilters;
