@@ -1,4 +1,5 @@
 import {createAction} from "@reduxjs/toolkit";
+import {heroesFetched, heroesFetching, heroesFetchingError} from "../components/heroesList/heroesSlice";
 
 
 export const fetchHeroes = (request) => (dispatch) => {
@@ -7,32 +8,6 @@ export const fetchHeroes = (request) => (dispatch) => {
         .then(data => dispatch(heroesFetched(data)))
         .catch(() => dispatch(heroesFetchingError()));
 }
-
-// export const heroesFetching = () => {
-//     return {
-//         type: 'HEROES_FETCHING'
-//     }
-// }
-
-export const heroesFetching = createAction('HEROES_FETCHING');
-
-// export const heroesFetched = (heroes) => {
-//     return {
-//         type: 'HEROES_FETCHED',
-//         payload: heroes
-//     }
-// }
-
-// в примере ниже createAction автоматически(неявно) подставляет аргумент который приходит в экшен в поле с названием payload
-export const heroesFetched = createAction('HEROES_FETCHED');
-
-// export const heroesFetchingError = () => {
-//     return {
-//         type: 'HEROES_FETCHING_ERROR'
-//     }
-// }
-
-export const heroesFetchingError = createAction('HEROES_FETCHING_ERROR');
 
 export const fetchFilters = (request) => (dispatch) => {
     dispatch(filtersFetching());
@@ -65,22 +40,3 @@ export const activeFilterChanged = (filter) => {
         payload: filter
     }
 }
-
-// export const heroCreated = (newHero) => {
-//     return {
-//         type: 'HEROES_CREATED',
-//         payload: newHero
-//
-//     }
-// }
-
-export const heroCreated = createAction('HEROES_CREATED');
-
-// export const heroDeleted = (id) => {
-//     return {
-//         type: "HERO_DELETED",
-//         payload: id
-//     }
-// }
-
-export const heroDeleted = createAction("HERO_DELETED");
