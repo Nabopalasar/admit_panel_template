@@ -11,7 +11,6 @@ const HeroesFilters = () => {
     const {filtersLoadingStatus, activeFilter} = useSelector(state => state.filters);
     const filters = selectAll(store.getState());
     const dispatch = useDispatch();
-    // const {request} = useHttp();
 
     // Запрос на сервер для получения фильтров и последовательной смены состояния
     useEffect(() => {
@@ -22,12 +21,12 @@ const HeroesFilters = () => {
     if (filtersLoadingStatus === "loading") {
         return <Spinner/>;
     } else if (filtersLoadingStatus === "error") {
-        return <h5 className="text-center mt-5">Ошибка загрузки</h5>
+        return <h5 className="text-center mt-5">Ошибка загрузки</h5>;
     }
 
     const renderFilters = (arr) => {
         if (arr.length === 0) {
-            return <h5 className="text-center mt-5">Фильтры не найдены</h5>
+            return <h5 className="text-center mt-5">Фильтры не найдены</h5>;
         }
 
         // Данные в json-файле я расширил классами и текстом
@@ -44,7 +43,7 @@ const HeroesFilters = () => {
                 className={btnClass}
                 onClick={() => dispatch(activeFilterChanged(name))}
             >{label}</button>
-        })
+        });
     }
 
     const elements = renderFilters(filters);

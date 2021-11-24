@@ -15,10 +15,8 @@ const HeroesList = () => {
         selectAll,
         (activeFilter, heroes) => {
             if (activeFilter === "all") {
-                console.log("render") // удалить как решится проблемма перерендеринга
                 return heroes;
             } else {
-                console.log("filt") // удалить как решится проблемма перерендеринга
                 return heroes.filter(item => item.element === activeFilter);
             }
         }
@@ -59,7 +57,6 @@ const HeroesList = () => {
                 {...props} onDeleteHeroes={() => onDeleteHeroes(id)}/>;
         });
     }
-
 
     const elements = renderHeroesList(filteredHeroes);
     return (

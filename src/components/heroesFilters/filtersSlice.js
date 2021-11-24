@@ -3,12 +3,6 @@ import {createAsyncThunk, createSlice, createEntityAdapter} from "@reduxjs/toolk
 
 const filtersAdapter = createEntityAdapter();
 
-// const initialState = {
-//     filters: [],
-//     filtersLoadingStatus: 'idle',
-//     activeFilter: "all"
-// }
-
 const initialState = filtersAdapter.getInitialState({
     filtersLoadingStatus: 'idle',
     activeFilter: "all"
