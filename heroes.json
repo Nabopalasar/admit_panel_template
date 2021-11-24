@@ -23,30 +23,41 @@
       "name": "Vyacheslav",
       "description": "nothing",
       "element": ""
+    },
+    {
+      "id": "205f9a5a-ad3a-474d-a8c6-0b3bb68da895",
+      "name": " ,mn",
+      "description": "n,bm",
+      "element": "earth"
     }
   ],
   "filters": [
     {
+      "id": "all",
       "name": "all",
       "label": "Все",
       "className": "btn btn-outline-dark"
     },
     {
+      "id": "fire",
       "name": "fire",
       "label": "Огонь",
       "className": "btn btn-danger"
     },
     {
+      "id": "water",
       "name": "water",
       "label": "Вода",
       "className": "btn btn-primary"
     },
     {
+      "id": "wind",
       "name": "wind",
       "label": "Ветер",
       "className": "btn btn-success"
     },
     {
+      "id": "earth",
       "name": "earth",
       "label": "Земля",
       "className": "btn btn-secondary"
